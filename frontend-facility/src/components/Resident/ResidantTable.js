@@ -1,8 +1,8 @@
-import React from 'react';
+import { useEffect, useState } from "react";
+import ManagerServiceRegistration from "../../services/ManagerServiceRegistration";
 import "../styles/residenttable.css";
-const Residenttable = () => {
-  
 
+const ResidentTable = () => {
     const [residents, setResidents] = useState([]);
     const [id, setId]=useState();
 
@@ -57,7 +57,35 @@ const Residenttable = () => {
     };
 
     return (
-        <div className="table-container">
+        <div>
+
+<nav class="navbar navbar-expand-lg  fixed-top">
+    <div class="container">
+      <a class="navbar-brand " href="index.html">Apartment Facility</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Apartment Facility</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="page.html">Signup</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+        <div class="ResidentTable  mt-5 ">
             <h1>Residents List</h1>
             <table className="table table-striped">
                 <thead>
@@ -113,9 +141,9 @@ const Residenttable = () => {
                 </tbody>
             </table>
         </div>
+
+        </div>
     );
 };
-    
 
-
-export default Residenttable
+export default ResidentTable;

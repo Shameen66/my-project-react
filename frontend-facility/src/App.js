@@ -12,7 +12,7 @@ import ManagerRegistrationForm from './components/manager/ManagerRegistrationFor
 import ResidentGrid from './components/Resident/ResidentGrid';
 import ResidentRegistrationForm from './components/Resident/ResidentRegistrationForm';
 import Managerview from './components/dashboard/Managerview';
-// import Residenttable from './components/Resident/residenttable';
+import ResidantTable from './components/Resident/ResidantTable';
 
 function App() {
 
@@ -30,7 +30,7 @@ function App() {
           <Route path="/viewfacility" Component={FacilityGrid} />
           <Route path="/viewresident" Component={ResidentGrid} />
           <Route path="/register-resident" Component={ResidentRegistrationForm} />
-          {/* <Route path="/residenttable" Component={Residenttable} /> */}
+          <Route path="/residenttable" Component={ResidantTable} />
 
         </Routes>
   );

@@ -1,49 +1,59 @@
-/* ResidentGrid.css */
-
-h1 {
-    color: black;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.table-container {
-    margin: 50px auto;
+.ResidentTable {
+    margin: 20px auto; /* Margin adjusted for smaller screens */
     width: 90%;
     max-width: 1200px;
+    margin-top: 200px;
 }
 
-.table {
+.ResidentTable .table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 
-.table th,
-.table td {
+.ResidentTable .table th,
+.ResidentTable .table td {
     border: 1px solid #dddddd;
+    text-align: center;
     padding: 8px;
 }
 
-.table th {
+.ResidentTable .table th {
     background-color: #f2f2f2;
 }
 
-.btn {
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none; /* Removing text decoration */
-    display: inline-block; /* Ensuring the button behaves like a block element */
+.ResidentTable .btn {
+    margin: 0 5px;
 }
 
-.btn-success {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .ResidentTable .table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    
+    .ResidentTable .table th,
+    .ResidentTable .table td {
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
 }
 
-.btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
+@media (max-width: 576px) {
+    .ResidentTable .table {
+        font-size: 12px; /* Further adjust font size for very small screens */
+    }
+    
+    .ResidentTable .table th,
+    .ResidentTable .table td {
+        padding: 4px; /* Further adjust padding for very small screens */
+    }
+
+    .ResidentTable .table img {
+        width: 80px; /* Adjust image size for very small screens */
+    }
+
+    .ResidentTable .btn {
+        font-size: 12px; /* Adjust button font size for very small screens */
+        padding: 5px 8px; /* Adjust button padding for very small screens */
+    }
 }
